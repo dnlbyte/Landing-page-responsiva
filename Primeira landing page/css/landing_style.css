@@ -6,32 +6,38 @@
 }
 html, body{
     height:100%;
+    overflow-x:hidden;
 }
 
-@font-face{
+@font-face {
     src: url("../fonts/OpenSans-Light.ttf");
     font-family: "Open Sans";
 }
 
+.clear{
+    clear:both;
+}
+
 .center{
-    width: 1200px;
+    max-width: 1280px;
+    width: 100%;
     margin: 0 auto;
     padding:0 2%;
 }
 
 .header{
-    min-width: 1200px;
     width: 100%;
+    padding:0 2%;
     height: 90px;
     background-color:#212343
 }
-.header img{
+.header img {
     margin: 15px;
 }
 
 .container-banner{
-    min-width: 1200px;
     width:100%;
+    padding: 0 2%;
     height: 557px;
     background-image:url("../imagens/header_bg.png");
     background-repeat: no-repeat;
@@ -41,6 +47,7 @@ html, body{
 
 .container-banner > .center{
     height:100%;
+
 }
 
 .form{
@@ -55,7 +62,7 @@ html, body{
     border-width: 12px;
     background-color: white;
     background-clip: padding-box;
-    /* o brackground origin tem o mesmo conceito porém serve para imagens*/
+    /* o brackground origin tem o mesmo conceito porÃ©m serve para imagens*/
 }
 .form h2{
     font-weight: normal;
@@ -101,10 +108,11 @@ html, body{
     border-bottom: 5px solid #5d649a;
 }
 .container-list{
-    padding: 30px;
+    padding: 30px 2%;
     margin-top: 100px;
     float: left;
-    width: 519px;
+    width: 100%;
+    max-width: 519px;
     height: 270px;
     background-color: rgba(33,35,67,0.7);
 }
@@ -116,8 +124,7 @@ html, body{
     color: white;
 }
 .container-2{
-    min-width: 1200px;
-    padding:40px 0;
+    padding:40px 2%;
     background-color: #ccc;
     text-align: center;
 }
@@ -126,8 +133,8 @@ html, body{
     font-weight: normal;
 }
 .container-2 p{
-    width: 698px;
-    margin:15px 0;
+    width: 100%;
+    margin:15px 2%;
     display: inline-block;
     text-align: justify;
 }
@@ -143,7 +150,7 @@ html, body{
     background-size:100% 100%;                    /*------------------------------------*/
 }
 .section-1{
-    padding: 90px 0;
+    padding: 90px 2%;
 }
 .section-1 h2{
     text-align: center;
@@ -176,8 +183,7 @@ html, body{
 }
 .footer{
     clear: both;                               /*limpar os floats restantes sempre que trabalhar com o float*/
-    padding: 30px 0;
-    min-width: 1200px;
+    padding: 30px 2%;
     width: 100%;
     border-top: 2px solid #363A6D;
     text-align: center;
@@ -186,3 +192,92 @@ html, body{
 .footer p{
     margin-top: 8px;
 }
+
+@media screen and (max-width:1024px){
+    .header{
+        width: 100%;
+        height: auto;
+        padding:15px 0;
+        text-align:center;
+    }
+    .header img{
+        margin:0;
+    }
+                                                            /*TIRAR O FLOAT (float:none;) e (display:inline-block), AO USAR "@media" */
+    .container-banner {
+        width: 100%;
+        padding: 40px 2%;
+        height: auto;
+        text-align:center;
+    }
+
+    .form{
+        display:inline-block;
+        padding: 10px;
+        width:40%;
+        max-width: 400px;
+        height: 100%;
+        float:right;
+        top: 0;
+    }
+    .input-container{
+        margin-top: 20px;
+    }
+    .input-container span,.form p {
+        display: inline-block;
+        width:100%;
+        color: #3a3a3a;
+        font-size: 17px;
+
+    }
+
+    .form p{
+        margin:20px 0;
+    }
+
+    .input-container input[type=text]{
+        margin-top:8px;
+        width: 100%;
+        height: 55px;
+    }
+    .form input[type=submit]{
+
+        max-width: 280px;
+        width: 100%;
+        height: 56px;
+
+    }
+
+    .container-list{
+        display:inline-block;
+        padding: 30px 0;
+        float: left;
+        width: 60%;
+        max-width: 500px;
+        height: auto;
+    }
+
+}
+ @media screen and (max-width: 768px){
+     .container-list{
+         margin-top: 0;
+         float:none;
+         display:inline-block;
+         width:100%;
+     }
+     .form{
+         float:none;
+         display:inline-block;
+         width:100%;
+         margin-top:30px;
+     }
+     .container-single {
+         display: inline-block;
+         float: none;
+         width: 100%;
+         max-width: 600px;
+         padding: 30px;
+
+     }
+
+ }
