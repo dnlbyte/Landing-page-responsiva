@@ -1,3 +1,3 @@
-# https://github.com/dnlbyte/Projetos-Full-stack/new/main/flappy%20bird
+# https://github.com/dnlbyte/Projetos-Full-stack/blob/main/flappy%20bird/index.html
 
 \\Acesso para o meu primeiro jogo, feito em JavaScript\\
