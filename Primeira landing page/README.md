@@ -1,2 +1,2 @@
-# https://dnlbyte.github.io/Projetos-Full-stack/blob/main/flappy%20bird/index.html
+# https://dnlbyte.github.io/Projetos-Full-stack/Primeira%20landing%20page/
 *Acesso para a visualização do meu primeiro exemplo de uma landing page 100% responsiva*
